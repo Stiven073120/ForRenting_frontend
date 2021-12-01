@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FrontendPedidos": {
+    "FrontendAlquiler": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/FrontendPedidos",
+            "outputPath": "dist/FrontendAlquiler",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FrontendPedidos:build:production"
+              "browserTarget": "FrontendAlquiler:build:production"
             },
             "development": {
-              "browserTarget": "FrontendPedidos:build:development"
+              "browserTarget": "FrontendAlquiler:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FrontendPedidos:build"
+            "browserTarget": "FrontendAlquiler:build"
           }
         },
         "test": {
@@ -106,5 +106,5 @@
       }
     }
   },
-  "defaultProject": "FrontendPedidos"
+  "defaultProject": "FrontendAlquiler"
 }
