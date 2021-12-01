@@ -26,6 +26,18 @@ const routes: Routes = [
     loadChildren: () => import("./modulos/pedidos/pedidos.module").then(x => x.PedidosModule)  
   },
   {
+    path: "administrador",
+    loadChildren: () => import("./modulos/administrador/administrador.module").then(x => x.AdministradorModule)  
+  },
+  {
+    path: "asesor",
+    loadChildren: () => import("./modulos/asesor/asesor.module").then(x => x.AsesorModule)  
+  },
+  {
+    path: "cliente",
+    loadChildren: () => import("./modulos/cliente/cliente.module").then(x => x.ClienteModule)  
+  },
+  {
     path: "**",
     component: ErrorComponent
   }
