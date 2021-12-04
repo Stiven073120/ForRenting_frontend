@@ -29,20 +29,20 @@ export class IdentificacionComponent implements OnInit {
     let claveCifrada = cryptoJS.MD5(clave).toString();
     this.servicioSeguridad.IdentificarCliente(usuario, claveCifrada).subscribe((datos: any) => {
       //ok
-      this.servicioSeguridad.AlmacenarSesion(datos);
+      this.servicioSeguridad.AlmacenarSesionCliente(datos);
       alert("datos de cliente correctos")
       this.router.navigate(["/inicio"])
     }, (error: any) => {
       //ko
       this.servicioSeguridad.IdentificarAsesor(usuario, claveCifrada).subscribe((datos: any) => {
         //ok
-        this.servicioSeguridad.AlmacenarSesion(datos);
+        this.servicioSeguridad.AlmacenarSesionAsesor(datos);
         alert("datos de asesor correctos")
         this.router.navigate(["/inicio"])
       }, (error: any) => {
         this.servicioSeguridad.IdentificarAdministrador(usuario, claveCifrada).subscribe((datos: any) => {
           //ok
-          this.servicioSeguridad.AlmacenarSesion(datos);
+          this.servicioSeguridad.AlmacenarSesionAdministrador(datos);
           alert("datos de administrador correctos")
           this.router.navigate(["/inicio"])
         },(error: any) => {

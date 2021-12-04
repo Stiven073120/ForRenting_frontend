@@ -49,8 +49,25 @@ export class SeguridadService {
     })    
   }
 
-  AlmacenarSesion(datos: ModeloIdentificar){
-    datos.estaIdentificado = true;
+  AlmacenarSesionAdministrador(datos: ModeloIdentificar){
+    datos.seInicioSesionAdministrador = true;
+    datos.seInicioSesion = true;
+    let stringDatos = JSON.stringify(datos);
+    localStorage.setItem("datosSesion", stringDatos);
+    this.RefrescarDatosSesion(datos);
+  }
+
+  AlmacenarSesionAsesor(datos: ModeloIdentificar){
+    datos.seInicioSesionAsesor = true;
+    datos.seInicioSesion = true;
+    let stringDatos = JSON.stringify(datos);
+    localStorage.setItem("datosSesion", stringDatos);
+    this.RefrescarDatosSesion(datos);
+  }
+
+  AlmacenarSesionCliente(datos: ModeloIdentificar){
+    datos.seInicioSesionCliente = true;
+    datos.seInicioSesion = true;
     let stringDatos = JSON.stringify(datos);
     localStorage.setItem("datosSesion", stringDatos);
     this.RefrescarDatosSesion(datos);

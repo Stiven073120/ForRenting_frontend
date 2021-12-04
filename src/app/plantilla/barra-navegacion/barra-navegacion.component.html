@@ -9,11 +9,20 @@
         <a routerLink="/inicio" class="brand-logo">ForRenting</a>
         <a routerLink="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li *ngIf="seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Acerca de</a></li>
-            <li *ngIf="seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Contactenos</a></li>
-            <li *ngIf="seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Cambiar clave</a></li>
-            <li *ngIf="seInicioSesion"><a routerLink="/administracion/crear-producto">Crear producto</a></li>
-            <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
+
+
+            <li *ngIf="seInicioSesionCliente"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
+
+
+            <li *ngIf="seInicioSesionAsesor"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
+
+
+            <li *ngIf="seInicioSesionAdministrador"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
+
+
+            <li *ngIf="!seInicioSesion"><a routerLink="/inicio">Home</a></li>
+            <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Acerca de</a></li>
+            <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Contactenos</a></li>
             <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificacion">iniciar Sesion</a></li>
             <li *ngIf="!seInicioSesion"><a routerLink="/administracion/crear-persona">Registrate</a></li>
         </ul>
@@ -21,11 +30,18 @@
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Acerca de</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Contactenos</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Cambiar clave</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/crear-producto">Crear producto</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
+    <li *ngIf="seInicioSesionCliente"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
+
+
+    <li *ngIf="seInicioSesionAsesor"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
+
+
+    <li *ngIf="seInicioSesionAdministrador"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
+
+
+    <li *ngIf="!seInicioSesion"><a routerLink="/inicio">Home</a></li>
+    <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Acerca de</a></li>
+    <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Contactenos</a></li>
     <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificacion">iniciar Sesion</a></li>
     <li *ngIf="!seInicioSesion"><a routerLink="/administracion/crear-persona">Registrate</a></li>
 </ul>

@@ -3,5 +3,8 @@ import { ModeloDatos } from "./datos.modelo";
 export class ModeloIdentificar{
     datos?: ModeloDatos;
     tk?: string;
-    estaIdentificado: boolean = false;
+    seInicioSesionAdministrador: boolean = false;
+    seInicioSesionAsesor: boolean = false;
+    seInicioSesionCliente: boolean = false;
+    seInicioSesion: boolean = false;
 }
