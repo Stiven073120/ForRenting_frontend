@@ -16,12 +16,12 @@
 
             <li *ngIf="seInicioSesionAsesor"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
 
-
+            <li ><a routerLink="/administrador/mostrar-asesor">Asesores</a></li>
             <li *ngIf="seInicioSesionAdministrador"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
 
 
             <li *ngIf="!seInicioSesion"><a routerLink="/inicio">Home</a></li>
-            <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Acerca de</a></li>
+            <li ><a routerLink="/seguridad/cambio-clave">Acerca de</a></li>
             <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/Cambiar-clave">Contactenos</a></li>
             <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificacion">iniciar Sesion</a></li>
             <li *ngIf="!seInicioSesion"><a routerLink="/administracion/crear-persona">Registrate</a></li>

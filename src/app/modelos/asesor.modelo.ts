@@ -1,0 +1,14 @@
+export class ModeloAsesor{
+    id?: string
+    codigo_asesor?: string;
+    nombre?: string;
+    apellido?: string;
+    correo?: string;
+    clave?: string;
+    tipo_doc?: string;
+    numero_doc?: string;
+    descripcion?: string;
+    direccion?: string;
+    telefono?: string;
+    role?: string;
+}

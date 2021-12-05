@@ -26,6 +26,7 @@ export class BarraNavegacionComponent implements OnInit {
       this.seInicioSesionAsesor = datos.seInicioSesionAsesor;
       this.seInicioSesionCliente = datos.seInicioSesionCliente;
       this.seInicioSesion = datos.seInicioSesion;
+      
     })
   }
 

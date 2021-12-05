@@ -1,0 +1,17 @@
+.row{
+    padding: 40px;
+}
+
+.row{
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#logor{
+    padding-bottom: 40px;
+}
+
+label{
+    color: black;
+}

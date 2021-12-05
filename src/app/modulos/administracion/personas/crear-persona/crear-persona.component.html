@@ -1,25 +1,45 @@
 <div >
-    <form class="row g-3">
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarCliente()" method="post" class="row g-3">
         <div id="logor" class="center">
             <i class="large material-icons">spa</i>
-        </div>
+            <h1 class="h3 mb-3 fw-normal">Registrate</h1>
+          </div>
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Correo</label>
-          <input type="email" class="validate" id="inputEmail4" required>
+          <input formControlName="correo" type="email" class="validate" id="inputEmail4" required>
         </div>
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Contraseña</label>
-          <input type="password" class="validate" id="inputPassword4" required>
+        <div class="col-6">
+          <label for="inputAddress" class="form-label">Contraseña</label>
+          <input formControlName="clave" type="password" class="validate" id="inputAddress" required>
         </div>
         <div class="col-12">
           <label for="inputAddress" class="form-label">Nombre completo</label>
-          <input type="text" class="validate" id="inputAddress" required>
+          <input formControlName="nombre" type="text" class="validate" id="inputAddress" required>
         </div>
         <div class="col-12">
           <label for="inputAddress2" class="form-label">Apellidos</label>
-          <input type="text" class="validate" id="inputAddress2" required>
+          <input formControlName="apellido" type="text" class="validate" id="inputAddress2" required>
         </div>
-        <div>
+        <div class="col-6">
+          <label for="inputAddress2" class="form-label">Tipo Documento</label>
+          <input formControlName="tipo_doc" type="text" class="validate" id="inputAddress2" required>
+        </div>
+        <div class="col-6">
+          <label for="inputAddress2" class="form-label">Documento</label>
+          <input formControlName="numero_doc" type="text" class="validate" id="inputAddress2" required>
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Descripcion</label>
+          <input formControlName="descripcion" type="text" class="validate" id="inputAddress2" required>
+        </div>
+        <div class="col-6">
+          <label for="inputAddress2" class="form-label">Direccion</label>
+          <input formControlName="direccion" type="text" class="validate" id="inputAddress2" required>
+        </div>
+        <div class="col-6">
+          <label for="inputAddress2" class="form-label">Telefono</label>
+          <input formControlName="telefono" type="text" class="validate" id="inputAddress2" required>
+        
             <p>
                 <label>
                   <input type="checkbox" class="validate" required/>
@@ -28,7 +48,7 @@
               </p>
         </div>
         <div class="col-12 center">
-          <button type="submit" class="btn btn-primary">Registrate</button>
+          <button [disabled]="!fgValidador.valid" type="submit" class="btn btn-primary">Registrate</button>
         </div>
       </form>
 </div>

@@ -1,0 +1,52 @@
+<body class="row">
+    <div id="logor" class="center">
+        <i class="large material-icons">spa</i>
+        <h1 class="h3 mb-3 fw-normal">Listado de Asesores</h1>
+    </div>
+    <div class="container">
+        <table class="table responsive">
+            <thead>
+                <tr>
+                    <th>
+                        Codigo
+                    </th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Apellido
+                    </th>
+                    <th>
+                        Correo
+                    </th>
+                    <th>
+                        Telefono
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of listaAsesor">
+                    <td>
+                        {{a.nombre}}
+                    </td>
+                    <td>
+                        {{a.apellido}}
+                    </td>
+                    <td>
+                        {{a.correo}}
+                    </td>
+                    <td>
+                        {{a.telefono}}
+                    </td>
+                    <td>
+                        <a routerLink="/administrador/asesor/editar-asesor/{{a.id}}" class="btn">Editar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="btnnuevo">
+            <a routerLink="/administrador/crear-asesor" class="btn">Nuevo Asesor</a>
+        </div>
+    </div>
+
+</body>
