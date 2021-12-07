@@ -27,6 +27,9 @@
             <tbody>
                 <tr *ngFor="let a of listaAsesor">
                     <td>
+                        {{a.codigo_asesor}}
+                    </td>
+                    <td>
                         {{a.nombre}}
                     </td>
                     <td>
@@ -39,7 +42,7 @@
                         {{a.telefono}}
                     </td>
                     <td>
-                        <a routerLink="/administrador/asesor/editar-asesor/{{a.id}}" class="btn">Editar</a>
+                        <a routerLink="/administrador/editar-asesor/{{a.id}}" class="btn">Editar</a>
                     </td>
                 </tr>
             </tbody>

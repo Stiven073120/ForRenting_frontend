@@ -14,11 +14,14 @@ listaAsesor: ModeloAsesor[] = [];
   constructor(private asesorServicio: AsesorService) { }
 
   ngOnInit(): void {
+    this.ObtenerListaAsesor();
   }
 
   ObtenerListaAsesor(){
     this.asesorServicio.MostrarAsesor().subscribe((datos: ModeloAsesor[]) => {
       this.listaAsesor = datos;
+    },(error: any) => {
+      
     })
   }
 

@@ -31,9 +31,14 @@ export class AsesorService {
     return this.http.get<ModeloAsesor[]>(`${this.url}/asesors`)
   }
 
+  //Mostrar/Obtener por Id
+  ObtenerAsesorPorId(id: string): Observable<ModeloAsesor>{
+    return this.http.get<ModeloAsesor>(`${this.url}/asesors/${id}`)
+  }
+
   //Editar
   EditarAsesor(asesor: ModeloAsesor): Observable<ModeloAsesor>{
-    return this.http.put<ModeloAsesor>(`${this.url}/asesors`, asesor, {
+    return this.http.put<ModeloAsesor>(`${this.url}/asesors/${asesor.id}`, asesor, {
       headers: new HttpHeaders({
         'Autorization': `Bearer ${this.token}`
       })
