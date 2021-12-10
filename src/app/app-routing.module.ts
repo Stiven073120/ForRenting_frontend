@@ -1,9 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AcercaDeComponent } from './plantilla/acerca-de/acerca-de.component';
+import { ContactenosComponent } from './plantilla/contactenos/contactenos.component';
 import { ErrorComponent } from './plantilla/error/error.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
 
 const routes: Routes = [
+  {
+    path: "acerca-de",
+    component: AcercaDeComponent
+  },
+  {
+    path: "contactenos",
+    component: ContactenosComponent
+  },
   {
     path:"inicio",
     component: InicioComponent
