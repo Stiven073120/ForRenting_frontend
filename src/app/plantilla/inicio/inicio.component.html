@@ -1,0 +1,56 @@
+<body class="row container">
+    <div id="logor" class="center">
+        <i class="large material-icons">spa</i>
+        <h1 class="h3 mb-3 fw-normal">Vehiculos Disponibles</h1>
+    </div>
+    <div class="center">
+        <table class="table responsive">
+            <thead>
+                <tr>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Descripcion
+                    </th>
+                    <th>
+                        Direccion
+                    </th>
+                    <th>
+                        Valor 
+                    </th>
+                    <th>
+                        Fotografia
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of listaVehiculo" id="vr">
+                    <td id="n">
+                        {{a.nombre}}
+                    </td>
+                    <td id="d1">
+                        {{a.descripcion}}
+                    </td>
+                    <td id="d2">
+                        {{a.direccion}}
+                    </td>
+                    <td id="v">
+                        {{a.valor}}
+                    </td>
+                    <th id="i">
+                        <img src="{{a.fotografia}}" class="imagenvehiculo">
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <div class="center" id="fortxt">
+            <h2 id="for">ForRenting</h2>
+            <p>
+                ForRenting es una empresa dedicada a la venta y alquiler de una gran variedad de vehiculos en diferentes
+                partes del pais.
+            </p>
+        </div>
+    </div>
+
+</body>

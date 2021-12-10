@@ -1,14 +1,36 @@
-table{
-    margin: 4%;
-    text-align: center;
-    
+.imagenvehiculo{
+    width: 200px;
 }
-.btn{
-    background-color:silver;
+
+#logor{
+    padding: 40px;
+    padding-bottom: 40px;
 }
-img{
-    width: 30%;
-    height: auto;
-    margin: 10%;
-    margin-left: 30%;
+
+.row{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#n{
+    padding-left: 60px;
+}
+
+#v{
+    padding-left: 60px;
+}
+
+#d1{
+    padding-left: 60px;
+}
+
+#d2{
+    padding-left: 60px;
+}
+
+#fortxt{
+    width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
 }
