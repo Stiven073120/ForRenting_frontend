@@ -4,6 +4,7 @@ import { CrearAsesorComponent } from './asesor/crear-asesor/crear-asesor.compone
 import { EditarAsesorComponent } from './asesor/editar-asesor/editar-asesor.component';
 import { EliminarAsesorComponent } from './asesor/eliminar-asesor/eliminar-asesor.component';
 import { MostrarAsesorComponent } from './asesor/mostrar-asesor/mostrar-asesor.component';
+import { MensajesContactenosComponent } from './mensajes-contactenos/mensajes-contactenos.component';
 import { AdministrarSedesComponent } from './sedes/administrar-sedes/administrar-sedes.component';
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'administrar-sedes',
     component: AdministrarSedesComponent
+  },
+  {
+    path: 'mensajes-contactenos',
+    component: MensajesContactenosComponent
   }
   
 ];

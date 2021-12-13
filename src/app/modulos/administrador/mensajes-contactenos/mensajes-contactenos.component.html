@@ -1,0 +1,43 @@
+<body class="row">
+    <div id="logor" class="center">
+        <i class="large material-icons">spa</i>
+        <h1 class="h3 mb-3 fw-normal">Listado de Mensajes Contactenos</h1>
+    </div>
+    <div class="container">
+        <table class="table responsive">
+            <thead>
+                <tr>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Telefono
+                    </th>
+                    <th>
+                        Asunto
+                    </th>
+                    <th>
+                        Mensaje
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of listaMensajes">
+                    <td>
+                        {{a.nombre}}
+                    </td>
+                    <td>
+                        {{a.telefono}}
+                    </td>
+                    <td>
+                        {{a.asunto}}
+                    </td>
+                    <td>
+                        {{a.mensaje}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>

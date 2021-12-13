@@ -1,0 +1,35 @@
+<body>
+    <div class="container">
+     <form method="post" [formGroup]="fgValidador" (ngSubmit)="EditarVehiculo()" class="row ">
+        <input type="hidden" formControlName="id">
+        <div id="logor" class="center">
+             <i class="large material-icons">spa</i>
+             <h1 class="h3 mb-3 fw-normal">Editar vehiculo</h1>
+         </div>
+         <div class="col-12">
+             <label for="inputAddress2" class="form-label">Nombre del vehiculo</label>
+             <input formControlName="nombre" type="text" class="validate" id="inputAddress2" required>
+           </div>
+           <div class="col-12">
+             <label for="inputAddress2" class="form-label">Descripcion del vehiculo</label>
+             <input formControlName="descripcion" type="text" class="validate" id="inputAddress2" required>
+           </div>
+           <div class="col-4">
+             <label for="inputAddress2" class="form-label">Direccion</label>
+             <input formControlName="direccion" type="text" class="validate" id="inputAddress2" required>
+           </div>
+           <div class="col-4">
+             <label for="inputAddress2" class="form-label">valor</label>
+             <input formControlName="valor" type="text" class="validate" id="inputAddress2" required>
+           </div>
+           <div class="col-4">
+             <label for="inputAddress2" class="form-label">imagen</label>
+             <input formControlName="fotografia" type="text" class="validate" id="inputAddress2" required>
+           </div>
+           <div id="btn" class="col-12 center">
+             <button [disabled]="!fgValidador.valid" type="submit" class="btn btn-primary">Editar Vehiculo</button>
+           </div>
+     </form>
+    </div>
+ </body>
+ 

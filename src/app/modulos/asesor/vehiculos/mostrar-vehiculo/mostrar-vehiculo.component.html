@@ -1,0 +1,57 @@
+<body class="row container">
+    <div id="logor" class="center">
+        <i class="large material-icons">spa</i>
+        <h1 class="h3 mb-3 fw-normal">Lista de Vehiculos</h1>
+    </div>
+    <div class="center">
+        <table class="table responsive">
+            <thead>
+                <tr>
+                    <th>
+                        Fotografia
+                    </th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Descripcion
+                    </th>
+                    <th>
+                        Direccion
+                    </th>
+                    <th>
+                        Valor 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of listaVehiculo" id="vr">
+                    <td id="i">
+                        <img src="{{a.fotografia}}" class="imagenvehiculo">
+                    </td>
+                    <td id="n">
+                        {{a.nombre}}
+                    </td>
+                    <td id="d1">
+                        {{a.descripcion}}
+                    </td>
+                    <td id="d2">
+                        {{a.direccion}}
+                    </td>
+                    <td id="v">
+                        {{a.valor}}
+                    </td>
+                    <td>
+                        <a routerLink="/asesor/editar-vehiculo/{{a.id}}" id="edit" class="btn">Editar</a>
+                    </td>
+                    <td>
+                        <a routerLink="/asesor/eliminar-vehiculo/{{a.id}}" id="elim" class="btn">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="btnnuevo">
+        <a routerLink="/asesor/crear-vehiculo" class="btn">Nuevo Vehiculo</a>
+    </div>
+</body>

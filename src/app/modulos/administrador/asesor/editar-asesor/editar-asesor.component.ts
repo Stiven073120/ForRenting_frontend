@@ -33,7 +33,7 @@ export class EditarAsesorComponent implements OnInit {
     this.id = this.route.snapshot.params["id"];
     this.BuscarAsesor();
   }
-
+ 
   BuscarAsesor(){
     this.asesorServicio.ObtenerAsesorPorId(this.id).subscribe((datos: ModeloAsesor) => {
       this.fgValidador.controls["id"].setValue(this.id)
@@ -78,8 +78,5 @@ export class EditarAsesorComponent implements OnInit {
     },(error: any) => {
       alert("error al editar asesor");
     })
-
-
   }
-
 }

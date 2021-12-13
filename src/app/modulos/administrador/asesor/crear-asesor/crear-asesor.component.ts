@@ -60,7 +60,6 @@ export class CrearAsesorComponent implements OnInit {
       alert("error al crear asesor");
     })
 
-
   }
 
 }

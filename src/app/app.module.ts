@@ -10,6 +10,7 @@ import { ErrorComponent } from './plantilla/error/error.component';
 import { HttpClientModule} from '@angular/common/http';
 import { ContactenosComponent } from './plantilla/contactenos/contactenos.component';
 import { AcercaDeComponent } from './plantilla/acerca-de/acerca-de.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { AcercaDeComponent } from './plantilla/acerca-de/acerca-de.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

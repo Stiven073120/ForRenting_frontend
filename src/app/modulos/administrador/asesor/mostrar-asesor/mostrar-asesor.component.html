@@ -42,7 +42,10 @@
                         {{a.telefono}}
                     </td>
                     <td>
-                        <a routerLink="/administrador/editar-asesor/{{a.id}}" class="btn">Editar</a>
+                        <a routerLink="/administrador/editar-asesor/{{a.id}}" id="edit" class="btn">Editar</a>
+                    </td>
+                    <td>
+                        <a routerLink="/administrador/eliminar-asesor/{{a.id}}" id="elim" class="btn">Eliminar</a>
                     </td>
                 </tr>
             </tbody>

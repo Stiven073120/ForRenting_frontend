@@ -47,7 +47,7 @@ export class AsesorService {
 
   //Eliminar
   EliminarAsesor(id: string): Observable<any>{
-    return this.http.delete(`${this.url}/asesor/${id}`, {
+    return this.http.delete(`${this.url}/asesors/${id}`, {
       headers: new HttpHeaders({
         'Autorization':`Beares ${this.token}`
       })

@@ -1,9 +1,10 @@
-#logor{
-    padding-bottom: 40px;
+.imagenvehiculo{
+    width: 200px;
 }
 
-.row{
+#logor{
     padding: 40px;
+    padding-bottom: 40px;
 }
 
 .row{
@@ -12,6 +13,27 @@
     padding-right: 10%;
 }
 
+#n{
+    padding-left: 60px;
+}
+
+#v{
+    padding-left: 60px;
+}
+
+#d1{
+    padding-left: 60px;
+}
+
+#d2{
+    padding-left: 60px;
+}
+
+#fortxt{
+    width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
 #btnnuevo{
     padding-top: 50px;
 }
