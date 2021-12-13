@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { ModeloAsesor } from 'src/app/modelos/asesor.modelo';
 import { ModeloDatos } from 'src/app/modelos/datos.modelo';
+import { ModeloIdentificar } from 'src/app/modelos/identificar.modelo';
 import { AsesorService } from 'src/app/servicios/asesor.service';
+import { SeguridadService } from 'src/app/servicios/seguridad.service';
 
 @Component({
   selector: 'app-crear-asesor',
@@ -23,13 +26,23 @@ export class CrearAsesorComponent implements OnInit {
     'numero_doc':['',[Validators.required]],
     'descripcion':['',[Validators.required]],
     'direccion':['',[Validators.required]],
-    'telefono':['',[Validators.required]]
+    'telefono':['',[Validators.required]],
   })
 
-  constructor(private fb: FormBuilder, private router: Router, private asesorServicio: AsesorService) { }
+  constructor(private fb: FormBuilder, private router: Router, private asesorServicio: AsesorService, private seguridadServicio: SeguridadService, private route: ActivatedRoute) { }
+
+  subs: Subscription = new Subscription();
+  id: any = "";
 
   ngOnInit(): void {
+    this.ObtenerId()
   }
+
+  ObtenerId(){
+    this.subs = this.seguridadServicio.ObtenerDatosUsuarioEnSesion().subscribe((datos: ModeloIdentificar) => {
+        this.id = datos.datos?.id;
+    })
+  }  
 
   GuardarAsesor(){
     let codigo_asesor = this.fgValidador.controls["codigo_asesor"].value;
@@ -42,6 +55,7 @@ export class CrearAsesorComponent implements OnInit {
     let direccion = this.fgValidador.controls["direccion"].value;
     let telefono = this.fgValidador.controls["telefono"].value;
     let role = this.role;
+    let id_administrador = this.id;
     let asesor = new ModeloAsesor();
     asesor.codigo_asesor = codigo_asesor;
     asesor.nombre = nombre;
@@ -53,6 +67,7 @@ export class CrearAsesorComponent implements OnInit {
     asesor.direccion = direccion;
     asesor.telefono = telefono;
     asesor.role = role;
+    asesor.id_administrador = id_administrador;
     this.asesorServicio.CrearAsesor(asesor).subscribe((datos: ModeloAsesor) => {
       alert("Se creo el asesro correctamente");
       this.router.navigate(['/administrador/mostrar-asesor'])

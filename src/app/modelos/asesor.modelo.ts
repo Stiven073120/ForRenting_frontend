@@ -11,4 +11,5 @@ export class ModeloAsesor{
     direccion?: string;
     telefono?: string;
     role?: string;
+    id_administrador?: string;
 }
