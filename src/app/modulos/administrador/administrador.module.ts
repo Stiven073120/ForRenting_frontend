@@ -9,6 +9,9 @@ import { MostrarAsesorComponent } from './asesor/mostrar-asesor/mostrar-asesor.c
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdministrarSedesComponent } from './sedes/administrar-sedes/administrar-sedes.component';
 import { MensajesContactenosComponent } from './mensajes-contactenos/mensajes-contactenos.component';
+import { MostrarClienteComponent } from './cliente/mostrar-cliente/mostrar-cliente.component';
+import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
+import { EliminarClienteComponent } from './cliente/eliminar-cliente/eliminar-cliente.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { MensajesContactenosComponent } from './mensajes-contactenos/mensajes-co
     EliminarAsesorComponent,
     MostrarAsesorComponent,
     AdministrarSedesComponent,
-    MensajesContactenosComponent
+    MensajesContactenosComponent,
+    MostrarClienteComponent,
+    EditarClienteComponent,
+    EliminarClienteComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,44 @@
+<div>
+  <form [formGroup]="fgValidador" (ngSubmit)="EditarClientee()" method="post" class="row g-3">
+    <div id="logor" class="center">
+      <i class="large material-icons">spa</i>
+      <h1 class="h3 mb-3 fw-normal">Editar Cliente</h1>
+    </div>
+    <input formControlName="id" type="hidden">
+    <div class="col-md-12">
+      <label for="inputEmail4" class="form-label">Correo</label>
+      <input formControlName="correo" type="email" class="validate" id="inputEmail4" required>
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Nombre completo</label>
+      <input formControlName="nombre" type="text" class="validate" id="inputAddress" required>
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Apellidos</label>
+      <input formControlName="apellido" type="text" class="validate" id="inputAddress2" required>
+    </div>
+    <div class="col-6">
+      <label for="inputAddress2" class="form-label">Tipo Documento</label>
+      <input formControlName="tipo_doc" type="text" class="validate" id="inputAddress2" required>
+    </div>
+    <div class="col-6">
+      <label for="inputAddress2" class="form-label">Documento</label>
+      <input formControlName="numero_doc" type="text" class="validate" id="inputAddress2" required>
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Descripcion</label>
+      <input formControlName="descripcion" type="text" class="validate" id="inputAddress2" required>
+    </div>
+    <div class="col-6">
+      <label for="inputAddress2" class="form-label">Direccion</label>
+      <input formControlName="direccion" type="text" class="validate" id="inputAddress2" required>
+    </div>
+    <div class="col-6">
+      <label for="inputAddress2" class="form-label">Telefono</label>
+      <input formControlName="telefono" type="text" class="validate" id="inputAddress2" required>
+    </div>
+    <div class="col-12 center">
+      <button [disabled]="!fgValidador.valid" type="submit" class="btn btn-primary">Editar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,61 @@
+<body class="row">
+    <div id="logor" class="center">
+        <i class="large material-icons">spa</i>
+        <h1 class="h3 mb-3 fw-normal">Listado de Clientes</h1>
+    </div>
+    <div class="container">
+        <table class="table responsive">
+            <thead>
+                <tr>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Apellido
+                    </th>
+                    <th>
+                        Correo
+                    </th>
+                    <th>
+                        Telefono
+                    </th>
+                    <th>
+                        Documento
+                    </th>
+                    <th>
+                        Direccion 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of listaCliente">
+                    <td>
+                        {{c.nombre}}
+                    </td>
+                    <td>
+                        {{c.apellido}}
+                    </td>
+                    <td>
+                        {{c.correo}}
+                    </td>
+                    <td>
+                        {{c.telefono}}
+                    </td>
+                    <td>
+                        {{c.numero_doc}}
+                    </td>
+                    <td>
+                        {{c.direccion}}
+                    </td>
+                    <td>
+                        <a routerLink="/administrador/editar-cliente/{{c.id}}" id="edit" class="btn">Editar</a>
+                    </td>
+                    <td>
+                        <a routerLink="/administrador/eliminar-cliente/{{c.id}}" id="elim" class="btn">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>

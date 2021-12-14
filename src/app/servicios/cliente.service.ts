@@ -30,15 +30,21 @@ export class ClienteService {
     return this.http.get<ModeloCliente[]>(`${this.url}/clientes`)
   }
 
+  //Mostrar/Obtener por Id
+  ObtenerClientePorId(id: string): Observable<ModeloCliente>{
+    return this.http.get<ModeloCliente>(`${this.url}/clientes/${id}`)
+  }
+
+
   //Editar
   EditarCliente(cliente: ModeloCliente): Observable<ModeloCliente>{
-    return this.http.put<ModeloCliente>(`${this.url}/cliente`, cliente, {
+    return this.http.patch<ModeloCliente>(`${this.url}/clientes/${cliente.id}`, cliente, {
       headers: new HttpHeaders({
         'Autorization': `Bearer ${this.token}`
       })
     })
   }
-
+ 
   //Eliminar
   EliminarCliente(id: string): Observable<any>{
     return this.http.delete(`${this.url}/clientes/${id}`, {

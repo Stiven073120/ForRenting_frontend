@@ -17,6 +17,7 @@
             <li *ngIf="seInicioSesionAsesor"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
 
             <li ><a routerLink="/administrador/administrar-sedes">Sedes</a></li>
+            <li *ngIf="seInicioSesionAdministrador"><a routerLink="/administrador/mostrar-cliente">Clientes</a></li>
             <li *ngIf="seInicioSesionAdministrador"><a routerLink="/administrador/mostrar-asesor">Asesores</a></li>
             <li *ngIf="seInicioSesionAdministrador"><a routerLink="/administrador/mensajes-contactenos">Mensajes de Contacto</a></li>
             <li *ngIf="seInicioSesionAdministrador"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
